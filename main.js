@@ -17,11 +17,11 @@ function translST_RU(){
     console.log("ru-st");
     // word mode
     if(length == 1){
-      console.log(findRU(text));
+      
     }
   }
   else{
-    consol.log("st-ru");
+    console.log("st-ru");
     // word mode
     if(length == 1){
       let foundW = find(text);
@@ -90,6 +90,11 @@ function translST_RU(){
         p2.innerHTML = text + "&#127280;&#127295;&#127280;" + tab + foundW["~apa"];
         div.appendChild(p2);
       }
+      if(foundW["exa"] != undefined & foundW["exaru"] != undefined){
+        let p2 = document.createElement("p");
+        p2.innerHTML = "<b>" + foundW["exa"] + "<br/>" + foundW["exaru"] + "</b>";
+        div.appendChild(p2);
+      }
       document.body.append(div);
     }
   }
@@ -107,8 +112,17 @@ function find(txt){
   else if(recu == 3){
     console.log("Слово не найдено!");
     recu=0;
+    let div = document.createElement("div");
+    div.id = "description";
+    let p = document.createElement("p");
+    p.innerHTML = "Слово не найдено!";
+    div.appendChild(p);
+    document.body.append(div);
   }
   else{
     return obj;
   }
+}
+function findRU(txt){
+  
 }
