@@ -1,2 +1,3 @@
-## Welcome to GitHub Pages
+## StalvoLanfDict
+Dictionary of Stalovsk Language
 
