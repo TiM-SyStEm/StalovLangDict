@@ -7,7 +7,15 @@
 	</head>
 	<body>
 		<main>
-			<script src="main.js"></script>
+		    <script type="text/javascript" src="data/dict.json"></script>
+			<script type="text/javascript" src="main.js"></script>
+			<div>
+              <input type="radio" id="st_ru" name="trans" value="st_ru" checked>
+              <label for="trans">Стэловско-Русский</label>
+              <br/>
+              <input type="radio" id="ru_st" name="trans" value="ru_st">
+              <label for="trans">Русско-Стэловский</label>
+            </div>
 			<input id="main_input" type="text">
 			<button onclick="translST_RU();" class="btn btn-primary">Перевести</button>
 		</main>
