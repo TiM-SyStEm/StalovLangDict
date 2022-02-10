@@ -130,3 +130,56 @@ template {
 [hidden] {
   display: none;
 }
+header{
+  background-color: #5363BD;
+  color: white;
+  padding: 20px 20px 20px 50px;
+  font-size: 30px;
+}
+main, #description{
+  margin: 50px 50px 0px 50px;
+}
+table {
+  width: 300px; /* Ширина таблицы */
+  border-collapse: collapse; /* Убираем двойные линии между ячейками */
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+td{
+  color: #5363BD;
+  padding: 3px; /* Поля вокруг содержимого таблицы */
+  border: 1px solid #5363BD; /* Параметры рамки */
+}
+th {
+  color: white;
+  background: #5363BD; /* Цвет фона */
+  border: 1px solid #5363BD; /* Параметры рамки */
+}
+caption{
+  color: #5363BD;
+  font-weight: bold;
+  font-size: 20px;
+}
+b{
+  color: #5363BD;
+}
+#main_input{
+  color: #5363BD;
+  border: 3px solid #5363BD;
+  font-size: 20px;
+  padding-bottom: 3px;
+  padding-top: 3px;
+  outline-color: blue;
+}
+#trans_btn{
+  color: #5363BD;
+  border: 3px solid #5363BD;
+  padding: 5px 5px 5px 5px;
+  border-radius: 20px;
+  font-size: 15px;
+  outline-color: blue;
+}
+#trans_btn:hover{
+  background-color: #5363BD;
+  color: white;
+}
