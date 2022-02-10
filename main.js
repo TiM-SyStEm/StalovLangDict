@@ -8,7 +8,7 @@ function translST_RU(){
      document.getElementById("description").remove();
   }
   let obj = document.getElementById("main_input");
-  text = obj.value;
+  text = obj.value.toLowerCase();
   console.log("text input: " + text);
   let words = text.split(" ");
   let length = words.length;
@@ -181,7 +181,4 @@ function find(txt){
     text = txt;
     return obj;
   }
-}
-function findRU(txt){
-  
 }
