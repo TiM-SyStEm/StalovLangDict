@@ -2,6 +2,7 @@
 
 let tab = "&emsp;&emsp;";
 let text = null;
+let st_word = null;
 
 function translST_RU(){
   if(document.getElementById("description")){
@@ -43,47 +44,47 @@ function mainLogic(text, length, words){
     }
     if(foundW["~o"] != undefined){
       let p2 = document.createElement("p");
-      p2.innerHTML = text + "&#127294;" + tab + foundW["~o"];
+      p2.innerHTML = st_word + "&#127294;" + tab + foundW["~o"];
       div.appendChild(p2);
     }
     if(foundW["~e"] != undefined){
       let p2 = document.createElement("p");
-      p2.innerHTML = text + "&#127284;" + tab + foundW["~e"];
+      p2.innerHTML = st_word + "&#127284;" + tab + foundW["~e"];
       div.appendChild(p2);
     }
     if(foundW["~a"] != undefined){
       let p2 = document.createElement("p");
-      p2.innerHTML = text + "&#127280;" + tab + foundW["~a"];
+      p2.innerHTML = st_word + "&#127280;" + tab + foundW["~a"];
       div.appendChild(p2);
     }
     if(foundW["~ono"] != undefined){
       let p2 = document.createElement("p");
-      p2.innerHTML = text + "&#127294;&#127293;&#127294;" + tab + foundW["~ono"];
+      p2.innerHTML = st_word + "&#127294;&#127293;&#127294;" + tab + foundW["~ono"];
       div.appendChild(p2);
     }
     if(foundW["~aro"] != undefined){
       let p2 = document.createElement("p");
-      p2.innerHTML = text + "&#127280;&#127297;&#127294;" + tab + foundW["~aro"];
+      p2.innerHTML = st_word + "&#127280;&#127297;&#127294;" + tab + foundW["~aro"];
       div.appendChild(p2);
     }
     if(foundW["~apo"] != undefined){
       let p2 = document.createElement("p");
-      p2.innerHTML = text + "&#127280;&#127295;&#127294;" + tab + foundW["~apo"];
+      p2.innerHTML = st_word + "&#127280;&#127295;&#127294;" + tab + foundW["~apo"];
       div.appendChild(p2);
     }
     if(foundW["~ona"] != undefined){
       let p2 = document.createElement("p");
-      p2.innerHTML = text + "&#127294;&#127293;&#127280;" + tab + foundW["~ona"];
+      p2.innerHTML = st_word + "&#127294;&#127293;&#127280;" + tab + foundW["~ona"];
       div.appendChild(p2);
     }
     if(foundW["~ara"] != undefined){
       let p2 = document.createElement("p");
-      p2.innerHTML = text + "&#127280;&#127297;&#127280;" + tab + foundW["~ara"];
+      p2.innerHTML = st_word + "&#127280;&#127297;&#127280;" + tab + foundW["~ara"];
       div.appendChild(p2);
     }
     if(foundW["~apa"] != undefined){
       let p2 = document.createElement("p");
-      p2.innerHTML = text + "&#127280;&#127295;&#127280;" + tab + foundW["~apa"];
+      p2.innerHTML = st_word + "&#127280;&#127295;&#127280;" + tab + foundW["~apa"];
       div.appendChild(p2);
     }
     if(foundW["~e"] != undefined){
@@ -93,11 +94,11 @@ function mainLogic(text, length, words){
 
       tr1.innerHTML = "<th>Время</th><th>Глагол</th>";
       let tr2 = document.createElement("tr");
-      tr2.innerHTML = "<td>Bazo Ĉoliro</td><td>"+text+"<b>ar</b></td>";
+      tr2.innerHTML = "<td>Bazo Ĉoliro</td><td>"+st_word+"<b>ar</b></td>";
       let tr3 = document.createElement("tr");
-      tr3.innerHTML = "<td>Bazo Stanjaro</td><td>"+text+"<b>on</b></td>";
+      tr3.innerHTML = "<td>Bazo Stanjaro</td><td>"+st_word+"<b>on</b></td>";
       let tr4 = document.createElement("tr");
-      tr4.innerHTML = "<td>Bazo Duâro</td><td>"+text+"<b>ap</b></td>";
+      tr4.innerHTML = "<td>Bazo Duâro</td><td>"+st_word+"<b>ap</b></td>";
       table.appendChild(tr1);
       table.appendChild(tr2);
       table.appendChild(tr3);
@@ -116,9 +117,9 @@ function mainLogic(text, length, words){
         let ptext = "-";
         let dtext = "-";
         if(foundW["~aro"] != undefined)
-          ptext=text+"<b>aro</b>";
+          ptext=st_word+"<b>aro</b>";
         if(foundW["~ara"] != undefined)
-          dtext=text+"<b>ara</b>";
+          dtext=st_word+"<b>ara</b>";
         tr2 = document.createElement("tr");
         tr2.innerHTML = "<td>Bazo Ĉoliro</td><td>"+ptext+"</td><td>"+dtext+"</td>";
       }
@@ -126,9 +127,9 @@ function mainLogic(text, length, words){
         let ptext = "-";
         let dtext = "-";
         if(foundW["~ono"] != undefined)
-          ptext=text+"<b>ono</b>";
+          ptext=st_word+"<b>ono</b>";
         if(foundW["~ona"] != undefined)
-          dtext=text+"<b>ona</b>";
+          dtext=st_word+"<b>ona</b>";
         tr3 = document.createElement("tr");
         tr3.innerHTML = "<td>Bazo Stanjaro</td><td>"+ptext+"</td><td>"+dtext+"</td>";
       }
@@ -136,9 +137,9 @@ function mainLogic(text, length, words){
         let ptext = "-";
         let dtext = "-";
         if(foundW["~apo"] != undefined)
-          ptext=text+"<b>apo</b>";
+          ptext=st_word+"<b>apo</b>";
         if(foundW["~apa"] != undefined)
-          dtext=text+"<b>apa</b>";
+          dtext=st_word+"<b>apa</b>";
         tr4 = document.createElement("tr");
         tr4.innerHTML = "<td>Bazo Duâro</td><td>"+ptext+"</td><td>"+dtext+"</td>";
       }
@@ -178,7 +179,7 @@ function find(txt){
     document.body.append(div);
   }
   else{
-    text = txt;
+    st_word = txt;
     return obj;
   }
 }

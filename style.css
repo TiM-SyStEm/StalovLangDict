@@ -183,3 +183,8 @@ b{
   background-color: #5363BD;
   color: white;
 }
+#words_len{
+  color: #5363BD;
+  font-size: 21px;
+  margin: 0px 50px 0px 50px;
+}
