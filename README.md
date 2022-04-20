@@ -1,3 +1,3 @@
 ## StalvoLanfDict
-Dictionary of Stalovsk Language
+Dictionary of Stalvo Language
 
