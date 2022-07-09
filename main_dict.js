@@ -48,7 +48,7 @@ function mainLogic(text, length, words){
       txt = "сущ.";
     }
     let p1 = document.createElement("p");
-    p1.innerHTML = "<i>" + txt + "</i>" + tab + foundW["~"];
+    p1.innerHTML = st_word + tab + "<i>" + txt + "</i>" + tab + foundW["~"];
     div.appendChild(p1);
   }
   //********************
@@ -65,12 +65,8 @@ function mainLogic(text, length, words){
   div.appendChild(p4);
 
   let p5 = document.createElement("p");
-  p5.innerHTML = st_word + "&#127294;&#127293;&#127294;" + ", " + st_word + "&#127280;&#127297;&#127294;" + ", " + st_word + "&#127280;&#127295;&#127294;" + tab + "<i>" + "прич." + "</i>";
+  p5.innerHTML = st_word + "&#127294;&#127293;" + ", ar " + st_word + "&#127294;&#127293;" + ", ap " + st_word + "&#127294;&#127293;" + tab + "<i>" + "прич." + "</i>";
   div.appendChild(p5);
-
-  let p6 = document.createElement("p");
-  p6.innerHTML = st_word + "&#127294;&#127293;&#127294;" + ", " + st_word + "&#127280;&#127297;&#127294;" + ", " + st_word + "&#127280;&#127295;&#127294;" + tab + "<i>" + "дееприч." + "</i>";
-  div.appendChild(p6);
   //********************
 
   let table = document.createElement("table");
@@ -79,47 +75,16 @@ function mainLogic(text, length, words){
 
   tr1.innerHTML = "<th>Время</th><th>Глагол</th>";
   let tr2 = document.createElement("tr");
-  tr2.innerHTML = "<td>Bazo Ĉolero</td><td>"+st_word+"<b>ar</b></td>";
+  tr2.innerHTML = "<td>Bazo Ĉolero</td><td><b>Ar </b>"+st_word+"e</td>";
   let tr3 = document.createElement("tr");
-  tr3.innerHTML = "<td>Bazo Stanjaro</td><td>"+st_word+"<b>on</b></td>";
+  tr3.innerHTML = "<td>Bazo Stanjaro</td><td>"+st_word+"e</td>";
   let tr4 = document.createElement("tr");
-  tr4.innerHTML = "<td>Bazo Duâro</td><td>"+st_word+"<b>ap</b></td>";
+  tr4.innerHTML = "<td>Bazo Duâro</td><td><b>Ap </b>"+st_word+"e</td>";
   table.appendChild(tr1);
   table.appendChild(tr2);
   table.appendChild(tr3);
   table.appendChild(tr4);
   div.appendChild(table);
-  let table2 = document.createElement("table");
-  table2.innerHTML = "<caption>Изменение причастия и деепричастия по базовым временам</caption>";
-  let tr1_2 = document.createElement("tr");
-  tr1_2.innerHTML = "<th>Время</th><th>Причастие</th><th>Деепричастие</th>";
-  let tr2_2 = document.createElement("tr");
-  let tr3_2 = document.createElement("tr");
-  let tr4_2 = document.createElement("tr");
-  let ptext = "";
-  let dtext = "";
-  ptext=st_word+"<b>aro</b>";
-  dtext=st_word+"<b>ara</b>";
-  tr2_2 = document.createElement("tr");
-  tr2_2.innerHTML = "<td>Bazo Ĉoliro</td><td>"+ptext+"</td><td>"+dtext+"</td>";
-  ptext=st_word+"<b>ono</b>";
-  dtext=st_word+"<b>ona</b>";
-  tr3_2 = document.createElement("tr");
-  tr3_2.innerHTML = "<td>Bazo Stanjaro</td><td>"+ptext+"</td><td>"+dtext+"</td>";
-  ptext=st_word+"<b>apo</b>";
-  dtext=st_word+"<b>apa</b>";
-  tr4_2 = document.createElement("tr");
-  tr4_2.innerHTML = "<td>Bazo Duâro</td><td>"+ptext+"</td><td>"+dtext+"</td>";
-  table2.appendChild(tr1_2);
-  table2.appendChild(tr2_2);
-  table2.appendChild(tr3_2);
-  table2.appendChild(tr4_2);
-  div.appendChild(table2);
-  if(foundW["exa"] != undefined & foundW["exaru"] != undefined){
-    let p2 = document.createElement("p");
-    p2.innerHTML = "<b>" + foundW["exa"] + "<br/>" + foundW["exaru"] + "</b>";
-    div.appendChild(p2);
-  }
   document.body.append(div);
 }
 
